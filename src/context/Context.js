@@ -22,6 +22,13 @@ const reducer = (state, action) => {
         ...state,
       basket:[...state.basket ,action.product]
       };
+      case 'DELETE_PRODUCT':
+        const lastState =[...state.basket]
+        const updateState = lastState.filter(e =>e.id !== action.product.id)
+        return {
+          ...state,
+        basket:[...updateState]
+        };
     default:
       return state;
   }

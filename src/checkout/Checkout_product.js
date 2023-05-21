@@ -1,14 +1,21 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import {Useapi} from "../context/Context"
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 function Checkout_product(props) {
+const dispatch =Useapi().dispatch
   const product =  props.product
   const description =product.description
   const id =product.id
   const imageUrl =product.imageUrl
   const price =product.price
-
-  console.log(product)
+const DeleteProduct =() =>{
+dispatch({
+  type:"DELETE_PRODUCT",
+  product
+})
+}
   return (
 <div className="product_checkout_hh">
 <img src={imageUrl} alt="" />
@@ -23,9 +30,9 @@ function Checkout_product(props) {
       <FontAwesomeIcon icon={faStar} color="yellow" />
       <FontAwesomeIcon icon={faStar} color="yellow" />
     </div>
-    <span>{price}</span>
+    <span> Price:  <FontAwesomeIcon icon={faDollarSign}/>  {price} </span>
   </div>
-  <button>Delete</button>
+  <button onClick={DeleteProduct}>Delete</button>
 </div>
 </div>
   )
