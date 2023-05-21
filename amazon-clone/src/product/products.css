@@ -1,0 +1,23 @@
+.header_product{
+  opacity: 0.5;
+  width: 100%;
+  height: 200px;
+}
+.header_product img{
+  width: 100%;
+  height: 200px;
+}
+
+.container_products{
+  position: relative;
+}
+.product_contaienr_div{
+  left: 2%;
+  right: 2%;
+  gap: 10px;
+
+  position: absolute;
+  top: 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px ,1fr));
+}
