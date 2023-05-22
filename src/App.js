@@ -3,6 +3,7 @@ import { Route ,Routes } from "react-router-dom";
 import Header from './Head/Header';
 import SignUp from './Sign/SignUp';
 import {Useapi} from "../src/context/Context"
+import Order from './order/Order';
 import { auth } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import Product from './product/Product';
@@ -38,6 +39,7 @@ auth.onAuthStateChanged(user =>{
       } />
       <Route path='/login' element={<SignUp />} />
       <Route path='cart' element={<Checkout/>}/>
+      <Route path='/order' element={<Order/>}/>
     </Routes>
   </div>
   )

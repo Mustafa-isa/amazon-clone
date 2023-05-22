@@ -51,7 +51,7 @@ console.log("test function")
         }
         </div>
         </Link>
-        <Link to="/orders" className="header-link ">
+        <Link to="/order" className="header-link ">
         Orders
         </Link>
         <Link to="/cart" className="header-link cart-link">
