@@ -17,8 +17,29 @@
 
 }
 
+.sure_buy{
+  display: flex;
+  flex-direction: column;
+
+}
+.sure_buy span{
+display: block;
+margin: 6px;
 
 
+}
+
+.sure_buy button{ 
+  background-color: #c8b20b;
+  padding: 7px;
+  text-align: center;
+  text-transform: capitalize;
+  outline: none;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  
+}
 /* meida */
 @media(max-width:960px){
 .order_body .order_item_div{

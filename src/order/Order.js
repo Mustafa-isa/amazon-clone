@@ -5,6 +5,9 @@ import { Useapi } from '../context/Context'
 import "./order.css"
 function Order() {
   const basket = Useapi().basket
+  const TotalPrice = basket.reduce((e,a)=>{
+    return e+a.price
+  },0)
   const user = Useapi().user
   return (
 <div className="order_container">
@@ -32,6 +35,19 @@ function Order() {
       </div>
       
     </div>
+
+
+    <div className="order_item_div">
+      <h2>Payment Method</h2>
+      <div className="addrees_flex">
+  <div className="sure_buy">
+    <span>Order Total:{TotalPrice}</span>
+    <button>Buy Now</button>
+  </div>
+      </div>
+      
+    </div>
+
   </div>
 </div>
   )
