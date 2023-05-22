@@ -47,3 +47,9 @@ button.signup{
   display: block;
   width: 100%;
 }
+@media(max-width:760px){
+  .signup-card{
+    width: 250px;
+
+  }
+}
